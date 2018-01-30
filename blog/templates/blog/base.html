@@ -1,15 +1,16 @@
 {% load staticfiles %}
+{% load compress %}
 
 <html>
 	<head>
 		<title>Test blog post</title>
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="{% static 'css/blog.css' %}">		
+		{# <link rel="stylesheet" href="{% static 'css/blog.css' %}">		 #}
 		<script src="https://use.fontawesome.com/ade8812c0f.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 		
-		
+		{% compress css %}
+			<link href="{% static 'css/app.scss' %}" media="screen" rel="stylesheet" type="text/x-scss">
+		{% endcompress %}
 		
 	</head>
 	<body>		
@@ -34,11 +35,6 @@
 			</div>
 		</div>
 		<div class="contain">
-			
-			
-			
-			
-			
 			<div class="page-header">
 				{% if user.is_authenticated %}
 					<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>

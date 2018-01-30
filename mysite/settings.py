@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'blog',
+    'blog',
+    'compressor',
+    'djangobower',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +122,27 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Add the file finer to the static finders setting 
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
+    'djangobower.finders.BowerFinder'
+]
+
+# Set custom settings for compressor 
+COMPRESS_OUTPUT_DIR = 'compressed'
+COMPRESS_OFFLINE = True
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
+
+# Specify the route to the location you would like the bower components to be installed 
+BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_DIR, 'blog/static/components')
+
+# Add foundation sites to the list of bower componenets to be installed 
+BOWER_INSTALLED_APPS = (
+    'foundation-sites',
+)
