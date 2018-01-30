@@ -29,11 +29,7 @@ color for text			:	#000000;
 color for number in bg	:	#F4F4F4;
 main color				:	#E66161;
 
-
 */
-
-
-
 
 /*=========================================
 			-- BODY & WINDOWS --
@@ -179,7 +175,11 @@ body {
 =========================================*/
 
 .contain {
-	background-color: #E66161;
+	background-color: #ff85a2;
+	background-image: url(../img/coverimg.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
 	height: calc(100vh - 40px);
 	width: calc(100% - 90px);
 	margin: 20px 20px 20px 0;
@@ -187,9 +187,19 @@ body {
 }
 
 
+.page-header {
+	height: calc(100vh - 40px);
+}
 
 
-
+p.quote {
+	font-family: 'Playfair Display', serif;
+	font-size: 35px;
+	line-height: 53px;
+	color: #E66161;
+	text-align: center;
+	margin: 100px 0;
+}
 
 
 
