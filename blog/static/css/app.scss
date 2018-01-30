@@ -1,5 +1,8 @@
-@import 'blog';
+@charset "UTF-8";
 
-body {
-    background-color: #000;
-}
+// Import all of Foundation
+// --------------------------------------------------
+
+@import "vendor/foundation";
+
+@import 'blog';
