@@ -1,15 +1,16 @@
 {% load staticfiles %}
+{% load compress %}
 
 <html>
 	<head>
 		<title>Test blog post</title>
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="{% static 'css/blog.css' %}">		
+		{# <link rel="stylesheet" href="{% static 'css/blog.css' %}">		 #}
 		<script src="https://use.fontawesome.com/ade8812c0f.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 		
-		
+		{% compress css %}
+			<link href="{% static 'css/app.scss' %}" media="screen" rel="stylesheet" type="text/x-scss">
+		{% endcompress %}
 		
 	</head>
 	<body>		
@@ -35,7 +36,18 @@
 		</div>
 		<div class="contain">
 			
-			
+<!-- Anchors (links) -->
+<a href="#0" class="button">Learn More</a>
+<a href="#features" class="button">View All Features</a>
+
+<!-- Buttons (actions) -->
+<button type="button" class="success button">Save</button>
+<button type="button" class="alert button">Delete</button>
+
+<a class="tiny button" href="#0">So Tiny</a>
+<a class="small button" href="#0">So Small</a>
+<a class="large button" href="#0">So Large</a>
+<a class="expanded button" href="#0">Such Expand</a>
 			
 			
 			
