@@ -15,56 +15,70 @@
 		
 	</head>
 	<body>		
-		<div class="priNav">
-			<div class="identity">
-				<a href="#" id="link-home">
-					O
-				</a>
-			</div>
-			<div class="menuHamburger">
-				<a href="#" id="link-test">
-					<div id="nav-icon">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
+		<div class="grid-x">
+			<div class="shrink cell fixed">
+				<div class="priNav">
+					<div class="identity">
+						<a href="#" id="link-home">
+							O
+						</a>
 					</div>
-				</a>
+					<div class="menuHamburger">
+						<a href="#" id="link-test">
+							<div id="nav-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</a>
+					</div>
+					<div class="mediaSocial">
+						<a href="#"><i id="link-mediasocial" class="fa fa-instagram" aria-hidden="true"></i></a>
+					</div>		
+				</div>
 			</div>
-			<div class="mediaSocial">
-				<a href="#"><i id="link-mediasocial" class="fa fa-instagram" aria-hidden="true"></i></a>
-			</div>		
 		</div>
-		<div class="contain">
-			
-			
-			
-			<div class="grid-x">
-				<div class="small-12 cell">
-					<div class="page-header">
-						{% if user.is_authenticated %}
-							<a href="{% url 'post_new' %}" class="top-menu">
-								<i class="fa fa-user-circle-o" aria-hidden="true"></i>
-							</a>
-						{% endif %}
+		<div class="grid-x">
+			<div class="shrink cell">
+				<div class="priNav">
+					<div class="identity">
+						<span class="transparent">O</span>
 					</div>
 				</div>
 			</div>
-			<div class="grid-x">
-				<div class="small-12 cell">
-					<div class="small-10 cell small-offset-1">
-						<p class="quote">
-							Duis dolor elit ut ex quis molestie consequat nonummy et eum laoreet blandit sit. Consectetuer aliquip elit, feugait praesent in iriure.
-						</p>
+			<div class="auto cell">
+				<div class="contain">
+					<div class="grid-x">
+						<div class="small-12 cell">
+							<div class="page-header">
+								{% if user.is_authenticated %}
+									<a href="{% url 'post_new' %}" class="top-menu">
+										<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+									</a>
+								{% endif %}
+							</div>
+						</div>
 					</div>
+					<div class="grid-x">
+						<div class="small-12 cell">
+							<div class="small-10 cell small-offset-1">
+								<p class="quote">
+									Duis dolor elit ut ex quis molestie consequat nonummy et eum laoreet blandit sit. Consectetuer aliquip elit, feugait praesent in iriure.
+								</p>
+							</div>
+						</div>
+					</div>
+					{% block content %}
+					{% endblock %}
 				</div>
 			</div>
-			
-			
+		</div>
+		
+		
 
-			{% block content %}
-			{% endblock %}
-		</div>
+		
+		
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="{% static 'js/vendor/foundation.js' %}"></script>
 		<script type="text/javascript" src="{% static 'js/custom/init-foundation.js' %}"></script>

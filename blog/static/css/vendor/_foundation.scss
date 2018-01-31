@@ -26,6 +26,7 @@
 @import '../../components/bower_components/foundation-sites/scss/foundation';
 //@import '../../../../components/bower_components/motion-ui/motion-ui';
 
+@include foundation-xy-grid-classes;
 @include foundation-global-styles;
 @include foundation-grid;
 @include foundation-typography;
