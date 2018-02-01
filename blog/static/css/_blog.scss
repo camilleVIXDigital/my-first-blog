@@ -100,7 +100,7 @@ p, h1, h2, h3, h4, h5, h6 {
 		font-family: "avenir";
 		
 		&.transparent {
-			color: #FFFFFF;
+			color: $white;
 		}
 	}
 }
@@ -396,5 +396,168 @@ p.quote {
 		color: #E66161;
 	}
 }
+
+
+
+
+
+/*=========================================
+			-- POST DETAILS --
+=========================================*/
+
+.article-relative {
+	margin-top: 300px;		/* IN WAITING */
+	position: relative;
+	
+	.article-thingsAbsolute {
+		
+		z-index: -10;
+		
+		.article-numberBG {
+			position: absolute;
+			left: -80px;
+			top: -250px;
+			
+			p {
+				font-family: "dense";
+				font-size: 250px;
+				color: #F4F4F4;
+				position: absolute;
+
+				@include breakpoint(medium) {
+					font-size: 450px;
+				}
+
+				@include breakpoint(large) {
+					font-size: 590px;
+				}
+			}
+		}
+		
+		.article-returnButton {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			
+			i {
+				font-size: 40px;
+				color: #E66161;
+			}
+		}
+	}
+}
+ 
+
+// ---------------------- TEXT -----------------------
+
+.article-textAll {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	margin: 50px 10% 50px 0;
+	
+	
+	.article-textDate {
+		font-family: "dense";
+		color: #E66161;
+		font-size: 17px;
+	}
+	
+	.article-textTitle {
+		max-width: 650px;
+		margin: 30px 0;
+		
+		h1 {
+			font-family: 'Playfair Display', serif;
+			color: $black;
+			font-size: 30px;
+			
+			@include breakpoint(medium) {
+				font-size: 50px;
+			}
+
+			@include breakpoint(large) {
+				font-size: 70px;
+			}
+		}
+	}
+	
+	.article-text {
+		font-family: "avenir";
+		
+		p {
+			font-size: 10px;
+			line-height: 19px;
+			
+			@include breakpoint(medium) {
+				font-size: 12px;
+				line-height: 23px;
+				column-count: 2;
+				column-gap: 30px;
+			}
+			
+			@include breakpoint(large) {
+				font-size: 14px;
+			}
+		}
+	}
+	
+	.article-textAuthor {
+		font-family: "dense";
+		color: #E66161;
+		font-size: 17px;
+		margin: 30px 0;
+		
+		p {
+			text-align: right;
+		}
+		
+		p:before {
+			content: '-';
+		}
+	}
+}
+
+
+
+// ---------------------- IMG ------------------------
+
+
+.article-img {
+	display: flex;
+	flex-direction: column;
+	height: 50%;
+	border: 5px solid #E66161;
+	overflow: scroll;
+
+	
+	@include breakpoint(large) {
+		height: calc(100% + 200px);
+	}
+	
+	img {
+		height: auto;
+		max-width: 100%;
+		min-width: 100%;
+	}
+}
+
+
+
+// ------------------ RETURN BUTTON ------------------
+
+
+
+
+
+
+// -------------------- NUMBER BG --------------------
+
+
+
+
+
+
 
 
