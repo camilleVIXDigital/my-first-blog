@@ -25,7 +25,7 @@ SECRET_KEY = '^_*0&zut267!@k145vkk@-x_gdwr+7s77w-xm2lbs_gzk@jh4*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '<camilleVIXDigital.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '<camilleVIXDigital.pythonanywhere.com', 'camillevixdigital.pythonanywhere.com']
 
 
 # Application definition
