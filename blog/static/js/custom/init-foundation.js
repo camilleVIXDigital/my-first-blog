@@ -34,3 +34,5 @@ function hoverShake(myElement, speed, deg) {
 hoverShake('#link-mediasocial', 100, 5);
 hoverShake('#link-home', 100, 5);
 hoverShake('#link-test', 100, 5);
+hoverShake('#link-buttonGoInArticle', 100, 5);
+
