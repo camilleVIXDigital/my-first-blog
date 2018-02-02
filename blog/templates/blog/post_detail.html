@@ -1,31 +1,26 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-	<div class="post">
-		{% if post.published_date %}
-			<div class="date">
-				{{ post.published_date }}
-			</div>
-		{% endif %}
-		<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-		<h1>{{ post.title }}</h1>
-		<p>{{ post.text|linebreaksbr }}</p>
-	</div>
+
+	
 <!--			ARTICLE - PAGE DETAILS	-->
 					<div class="grid-x article-relative">
 						<div class="small-12 medium-12 large-8 large-offset-1 cell">
+							<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
 							<div class="article-textAll">
 								<div class="article-textDate">
-									<p>Monday 29th January 2018</p>
+									{% if post.published_date %}
+										<p>{{ post.published_date }}</p>
+									{% endif %}
 								</div>
 								<div class="article-textTitle">
 									<h1>
-										Title of an article on many line
+										{{ post.title }}
 									</h1>
 								</div>
 								<div class="article-text">
 									<p>
-										nummy et nulla molestie dignissim, et te duis dolore eros ipsum feugiat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fanummy et nulla molestie dignissim, et te duis dolore eros ipsum feugiat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad facilisi wisi et ad coat. Veniam nostrud commodo ut ad fanummy et nulla molestie dignissim, et te duis dolore eros ipsum feugiat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus eu exercatum ea conse luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fablab.cilisi wisi et ad coat luptatum ea consectetuer eu exercatum ea conse. Veniam nostrud giat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad facilisi wisi et ad coat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fablab.cilisi wisi et ad coat luptatum ea consectetuer eu exercatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fablab.cilisi wisi et ad coat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fablab. nummy et nulla molestie dignissim, et te duis dolore eros ipsum feugiat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fanummy et nulla molestie dignissim, et te duis dolore eros ipsum feugiat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facili dolore eros ipsum feugiat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad facilisi wisi et ad coat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fablab.cilisi wisi et ad coat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad consequlat.
+										{{ post.text|linebreaksbr }}
 									</p>
 								</div>
 								<div class="article-textAuthor">
@@ -55,4 +50,9 @@
 							</div>
 						</div>
 					</div>
+
+
+
 {% endblock %}
+
+
