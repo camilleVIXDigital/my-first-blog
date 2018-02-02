@@ -10,7 +10,7 @@
 							<div class="article-textAll">
 								<div class="article-textDate">
 									{% if post.published_date %}
-										<p>{{ post.published_date }}</p>
+										<p>{{ post.published_date|date:"l" }}</p>
 									{% endif %}
 								</div>
 								<div class="article-textTitle">

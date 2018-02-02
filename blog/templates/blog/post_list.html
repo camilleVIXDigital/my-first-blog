@@ -46,7 +46,7 @@
 						</div>
 						<div class="cover-text">
 							<p class="cover-resume">
-								{{ post.text|linebreaksbr }}
+								{{ post.text|truncatechars:200 }}
 							</p>
 							<p class="cover-date">
 								{{ post.published_date }}
