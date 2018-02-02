@@ -14,8 +14,50 @@
 		{% endcompress %}
 		
 	</head>
-	<body>	
-		hello
+	<body>		
+		<div class="grid-x">
+			<div class="shrink cell fixed">
+				<div class="priNav">
+					<div class="identity">
+						<a href="#" id="link-home">
+							O
+						</a>
+					</div>
+					<div class="menuHamburger">
+						<a href="#" id="link-test">
+							<div id="nav-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</a>
+					</div>
+					<div class="mediaSocial">
+						<a href="#"><i id="link-mediasocial" class="fa fa-instagram" aria-hidden="true"></i></a>
+					</div>		
+				</div>
+			</div>
+		</div>
+		<div class="grid-x">
+			<div class="shrink cell">
+				<div class="priNav">
+					<div class="identity">
+						<span class="transparent">O</span>
+					</div>
+				</div>
+			</div>
+			<div class="auto cell">
+				<div class="contain">		
+					{% block content %}
+					{% endblock %}
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="{% static 'js/vendor/foundation.js' %}"></script>
 		<script type="text/javascript" src="{% static 'js/custom/init-foundation.js' %}"></script>
