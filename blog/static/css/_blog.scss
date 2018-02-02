@@ -50,11 +50,14 @@ body {
 
 .relative {
 	position: relative;
-	height: calc(100% - 40px);
-	width: 100%;
+	height: calc(100vh - 20px);
+	margin: 10px 10px 10px 0;
+	
 	
 	@include breakpoint(medium) {
 		margin-bottom: 100px;
+		height: calc(100% - 40px);
+		margin: 20px 20px 20px 0;
 	}
 }
 
@@ -145,7 +148,6 @@ p, h1, h2, h3, h4, h5, h6 {
 	transition: .25s ease-in-out;
 }
 
-
 #nav-icon span:nth-child(1) {
 	top: 0px;
 }
@@ -192,19 +194,9 @@ p, h1, h2, h3, h4, h5, h6 {
 =========================================*/
 
 .contain {
-	background-color: #ff85a2;
-	background-image: url(../img/coverimg.jpg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
-	height: calc(100vh - 40px);
-	margin: 20px 20px 20px 0;
+	height: auto;
+	width: 100%;
 	
-	
-	@include breakpoint(small only) {
-		height: calc(100vh - 20px);
-		margin: 10px 10px 10px 0;
-	}
 }
 
 
@@ -213,7 +205,18 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 .page-header {
+	background-color: #ff85a2;
+	background-image: url(../img/coverimg.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
 	height: calc(100vh - 40px);
+	margin: 20px 20px 20px 0;
+	
+	@include breakpoint(small only) {
+		height: calc(100vh - 20px);
+		margin: 10px 10px 10px 0;
+	}
 }
 
 
@@ -245,13 +248,12 @@ p.quote {
 
 
 /*=========================================
-				-- POST LIST --
+		  -- POST LIST & COVER --
 =========================================*/
 
 .coverimg-article {
 	overflow: hidden;
 	height: 100%;
-	
 	background-image: url(../img/coverimg.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -260,7 +262,6 @@ p.quote {
 	@include breakpoint(small only) {
 		height: 40%;
 	}
-	
 }
 
 
@@ -300,7 +301,6 @@ p.quote {
 		@include breakpoint(large) {
 			font-size: 70px;
 		}
-		
 	}
 }
 
@@ -387,8 +387,6 @@ p.quote {
 	
 	@include breakpoint(small only) {
 		right: 0;
-		top: 0;
-		bottom: 0;
 	}
 	
 	i {
@@ -405,18 +403,23 @@ p.quote {
 			-- POST DETAILS --
 =========================================*/
 
+
 .article-relative {
 	margin-top: 300px;		/* IN WAITING */
 	position: relative;
 	
 	.article-thingsAbsolute {
 		
-		z-index: -10;
-		
 		.article-numberBG {
 			position: absolute;
 			left: -80px;
 			top: -250px;
+			z-index: -10;
+			
+			@include breakpoint(small only) {
+				left: -30px;
+				top: -150px;
+			}
 			
 			p {
 				font-family: "dense";
@@ -436,8 +439,13 @@ p.quote {
 		
 		.article-returnButton {
 			position: absolute;
-			top: 50%;
 			left: 0;
+			top: 0;
+			z-index: 10;
+			
+			@include breakpoint(large) {
+				top: 50%;
+			}
 			
 			i {
 				font-size: 40px;
@@ -454,9 +462,16 @@ p.quote {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100%;
-	margin: 50px 10% 50px 0;
+	padding: 50px 10% 0 0;
+	margin: 10px 0;
 	
+	@include breakpoint(medium) {
+		height: 100%;
+	}
+	
+	@include breakpoint(medium only) {
+		padding: 50px 20px 0 0;
+	}
 	
 	.article-textDate {
 		font-family: "dense";
@@ -486,6 +501,12 @@ p.quote {
 	.article-text {
 		font-family: "avenir";
 		
+		@include breakpoint(medium) {
+			max-height: 100vh;
+			overflow: scroll;
+			border-bottom: 3px solid #E66161;
+		}
+		
 		p {
 			font-size: 10px;
 			line-height: 19px;
@@ -495,6 +516,7 @@ p.quote {
 				line-height: 23px;
 				column-count: 2;
 				column-gap: 30px;
+				
 			}
 			
 			@include breakpoint(large) {
@@ -507,7 +529,7 @@ p.quote {
 		font-family: "dense";
 		color: #E66161;
 		font-size: 17px;
-		margin: 30px 0;
+		padding: 30px 0;
 		
 		p {
 			text-align: right;
@@ -527,13 +549,14 @@ p.quote {
 .article-img {
 	display: flex;
 	flex-direction: column;
-	height: 50%;
-	border: 5px solid #E66161;
+	height: 80%;
+	border: 3px solid #E66161;
 	overflow: scroll;
-
+	margin: 0 10px 10px 0;
 	
 	@include breakpoint(large) {
-		height: calc(100% + 200px);
+		height: calc(100% - 40px);
+		margin: 20px 20px 20px 0;
 	}
 	
 	img {
@@ -542,21 +565,6 @@ p.quote {
 		min-width: 100%;
 	}
 }
-
-
-
-// ------------------ RETURN BUTTON ------------------
-
-
-
-
-
-
-// -------------------- NUMBER BG --------------------
-
-
-
-
 
 
 
