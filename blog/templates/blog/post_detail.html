@@ -6,7 +6,7 @@
 <!--			ARTICLE - PAGE DETAILS	-->
 					<div class="grid-x article-relative">
 						<div class="small-12 medium-12 large-8 large-offset-1 cell">
-							<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+							<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><i class="fas fa-edit"></i></a>
 							<div class="article-textAll">
 								<div class="article-textDate">
 									{% if post.published_date %}
@@ -44,7 +44,7 @@
 								</p>
 							</div>
 							<div class="article-returnButton">
-								<a href="#">
+								<a href="{% url 'post_list' pk=post.pk %}">
 									<i class="test fa fa-angle-left" aria-hidden="true"></i>
 								</a>
 							</div>
