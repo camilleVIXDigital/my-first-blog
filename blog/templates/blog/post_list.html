@@ -1,12 +1,152 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+		<div class="grid-x">
+			<div class="shrink cell fixed">
+				<div class="priNav">
+					<div class="identity">
+						<a href="#" id="link-home">
+							O
+						</a>
+					</div>
+					<div class="menuHamburger">
+						<a href="#" id="link-test">
+							<div id="nav-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</a>
+					</div>
+					<div class="mediaSocial">
+						<a href="#"><i id="link-mediasocial" class="fa fa-instagram" aria-hidden="true"></i></a>
+					</div>		
+				</div>
+			</div>
+		</div>
+		<div class="grid-x">
+			<div class="shrink cell">
+				<div class="priNav">
+					<div class="identity">
+						<span class="transparent">O</span>
+					</div>
+				</div>
+			</div>
+			<div class="auto cell">
+				<div class="contain">
+					<div class="grid-x">
+						<div class="small-12 cell">
+							<div class="page-header">
+								{% if user.is_authenticated %}
+									<a href="{% url 'post_new' %}" class="top-menu">
+										<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+									</a>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+					<div class="grid-x">
+						<div class="small-12 cell">
+							<div class="small-10 cell small-offset-1">
+								<p class="quote">
+									Duis dolor elit ut ex quis molestie consequat nonummy et eum laoreet blandit sit. Consectetuer aliquip elit, feugait praesent in iriure.
+								</p>
+							</div>
+						</div>
+					</div>
+					
+<!--			LAST ARTICLE - FIRST PAGE		-->
+					<div class="grid-x relative">
+						<div class="small-12 medium-5 cell">
+							<div class="coverimg-article">
+								
+							</div>
+						</div>
+						<div class="small-12 medium-7 cell">
+							<div class="cover-allText">
+								<div class="cover-titleOfArticle">
+									<h1>
+										Title of an article on many line
+									</h1>
+								</div>
+								<div class="cover-text">
+									<p class="cover-resume">
+										Nummy et nulla molestie dignissim, et te duis dolore eros ipsum feugiat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad facilisi wisi et ad coat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fablab.
+									</p>
+									<p class="cover-date">
+										Tuesday 01th February 2018
+									</p>
+								</div>
+							</div>
+							<div class="cover-numberBg">
+								<p>
+									07
+								</p>
+							</div>
+							<div class="cover-buttonGoInArticle">
+								<a href="#">
+									<i class="link-button fa fa-angle-right" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				
+<!--			ARTICLE - PAGE DETAILS	-->
+					<div class="grid-x article-relative">
+						<div class="small-12 medium-12 large-8 large-offset-1 cell">
+							<div class="article-textAll">
+								<div class="article-textDate">
+									<p>Monday 29th January 2018</p>
+								</div>
+								<div class="article-textTitle">
+									<h1>
+										Title of an article on many line
+									</h1>
+								</div>
+								<div class="article-text">
+									<p>
+										nummy et nulla molestie dignissim, et te duis dolore eros ipsum feugiat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fanummy et nulla molestie dignissim, et te duis dolore eros ipsum feugiat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad facilisi wisi et ad coat. Veniam nostrud commodo ut ad fanummy et nulla molestie dignissim, et te duis dolore eros ipsum feugiat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus eu exercatum ea conse luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fablab.cilisi wisi et ad coat luptatum ea consectetuer eu exercatum ea conse. Veniam nostrud giat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad facilisi wisi et ad coat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fablab.cilisi wisi et ad coat luptatum ea consectetuer eu exercatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fablab.cilisi wisi et ad coat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fablab. nummy et nulla molestie dignissim, et te duis dolore eros ipsum feugiat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fanummy et nulla molestie dignissim, et te duis dolore eros ipsum feugiat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facili dolore eros ipsum feugiat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad facilisi wisi et ad coat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad fablab.cilisi wisi et ad coat luptatum ea consectetuer eu exerci iriuredolor. Facilisis praesent nulla facilisis facilisi velit dignissim, odio at vel feugait sciurus minim diam, eros hendrerit facilisis ut. Veniam nostrud commodo ut ad consequlat.
+									</p>
+								</div>
+								<div class="article-textAuthor">
+									<p>
+										Léonie Dumont
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="small-12 medium-12 large-3 cell">
+							<div class="article-img">
+								<img src="../../static/img/coverimg.jpg">
+								<img src="../../static/img/coverimg_article5.jpg">
+								<img src="../../static/img/coverimg_article6.jpg">
+							</div>
+						</div>
+						<div class="article-thingsAbsolute">
+							<div class="article-numberBg">
+								<p>
+									07
+								</p>
+							</div>
+							<div class="article-returnButton">
+								<a href="#">
+									<i class="link-button fa fa-angle-left" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
 	{% for post in posts %}
 		<div class="post">
 			<div class="date">
 				{{ post.published_date }}
 			</div>
 			<h1>
+				Coucou
 				<a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
 			</h1>
 			<p>{{ post.text|linebreaksbr }}</p>
